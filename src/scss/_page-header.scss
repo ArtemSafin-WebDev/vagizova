@@ -1,0 +1,101 @@
+.page-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 150;
+    color: white;
+    
+}
+
+.page-header__row {
+    display: flex;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+.page-header__logo {
+    flex-shrink: 0;
+    margin-right: 8rem;
+
+    svg {
+        width: 8rem;
+        height: 8rem;
+        fill: white;
+    }
+}
+
+.page-header__menu {
+    margin-right: auto;
+}
+
+.page-header__nav {
+   
+}
+
+.page-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-header__nav-list-item {
+    margin-right: 2.5rem;
+    flex-shrink: 0;
+}
+
+.page-header__nav-link {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    white-space: normal;
+}
+
+.page-header__contact-btn {
+    padding: 1rem 2.4rem;
+    border-radius: 4rem;
+    background-color: var(--primary-color);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-right: 3rem;
+    border: 1px solid white;
+}
+
+.page-header__languages {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__languages-divider {
+    width: 1px;
+    height: 2rem;
+    margin: 0 1rem;
+    flex-shrink: 0;
+    background-color: #fff;
+}
+
+.page-header__languages-link {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: rgba(white, .5);
+    &:link,
+    &:visited {
+        color: rgba(white, .5);
+    }
+
+    &.active {
+        color: white;
+    }
+}
+
+
+.page-header__phone-link {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-right: 3rem;
+    font-weight: 500;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--red);
+    }
+}

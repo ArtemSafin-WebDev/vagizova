@@ -1,0 +1,41 @@
+.documents {
+    margin-bottom: 8rem;
+}
+
+.documents__heading {
+    margin-bottom: 3rem;
+}
+
+
+.documents__list {
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+.documents__list-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+.documents__card {
+    display: flex;
+    align-items: flex-start;
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        fill: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.documents__card-content {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
