@@ -15,6 +15,10 @@
     --red-hover: #eb3d3d;
     --text-color: #1f2022;
     --roboto: 'Roboto', sans-serif;
+
+    @include breakpoint(mobile) {
+        --content-padding: 2rem;
+    }
 }
 
 html {
@@ -22,7 +26,14 @@ html {
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
 
+
+    font-size: clamp(6px, 0.65vw, 10px);
+
     @include noHighlight();
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {
@@ -173,6 +184,15 @@ td,
 th {
     text-align: left;
     vertical-align: top;
+}
+
+
+section {
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .lazyload,

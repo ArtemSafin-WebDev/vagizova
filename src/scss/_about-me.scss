@@ -1,0 +1,41 @@
+.about-me__row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+
+
+.about-me__right-col {
+    grid-column: span 2;
+
+    @include breakpoint(mobile) {
+        grid-column: span 1;
+    }
+}
+
+.about-me__image {
+    border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+        border-radius: 1.5rem;
+    }
+}
+
+.about-me__text-content {
+    column-count: 2;
+    column-gap: 5rem;
+    margin-top: -0.5rem;
+
+    @include breakpoint(small-tablet) {
+        column-count: 1;
+    }
+}
+
+.about-me__learn-more-btn {
+}

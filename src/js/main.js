@@ -8,6 +8,11 @@ import phoneMask from './phoneMask';
 import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
 import newsSlider from './newsSlider';
+import fixedHeader from './fixedHeader';
+import accordions from './accordions';
+import anchorLinks from './anchorLinks';
+import menu from './menu';
+import vhUnits from './vhUnits';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -19,6 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
     onlyNumeric();
     fileUpload();
     newsSlider();
+    fixedHeader();
+    accordions();
+    anchorLinks();
+    menu();
+    vhUnits();
+    
 });
 
 window.addEventListener('load', function() {

@@ -10,11 +10,22 @@ export default function newsSlider() {
 
         new Swiper(container, {
             watchOverflow: true,
-            spaceBetween: 20,
-            slidesPerView: 4,
+            spaceBetween: 10,
+            slidesPerView: 1,
+            threshold: 5,
             navigation: {
                 nextEl: element.querySelector('.news__slider-arrow--next'),
                 prevEl: element.querySelector('.news__slider-arrow--prev')
+            },
+            breakpoints: {
+                569: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                800: {
+                    spaceBetween: 20,
+                    slidesPerView: 4
+                }
             }
         });
     });

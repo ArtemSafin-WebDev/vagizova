@@ -1,26 +1,74 @@
 .intro {
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     color: white;
-    margin-bottom: 8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.intro__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img,
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(22, 31, 110, 0.75), rgba(22, 31, 110, 0.75));
+    }
 }
 
 .intro__content {
-    min-height: 90rem;
+    height: 100vh;
+    max-height: 100rem;
     padding: 12rem 0;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        min-height: calc(var(--vh, 1vh) * 100);
+        height: auto;
+        max-height: none;
+        padding: 6rem 0;
+    }
 }
 
 .intro__heading {
     font-size: 6rem;
     line-height: 1.2;
-    margin-bottom: 3rem;
-}
+    margin-bottom: 2rem;
 
+    @include breakpoint(mobile) {
+        font-size: 3.4rem;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+    }
+}
 
 .intro__text {
     font-size: 2rem;
     line-height: 1.4;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
 }
 
 .intro__text-content {
@@ -29,5 +77,62 @@
 }
 
 .intro__btn {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+}
+
+.intro__scroll-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+
+    @include breakpoint(mobile) {
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: 3rem;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: rgba(white, .3);
+       
+
+        path {
+            animation-name: scroll-arrow;
+            animation-duration: .8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            &:nth-child(1) {
+                animation-delay: .2s;
+            }
+        }
+    }
+}
+
+
+@keyframes scroll-arrow {
+    0% {
+        fill: rgba(white, .3);
+    }
+
+    25% {
+        fill: white;
+    }
+
+    50% {
+        fill: rgba(white, .3);
+    }
+
+    100% {
+        fill: rgba(white, .3);
+    }
 }

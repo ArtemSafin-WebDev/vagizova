@@ -1,0 +1,62 @@
+.default-content {
+    font-size: 1.8rem;
+    line-height: 1.4;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+
+    big {
+        font-size: 2rem;
+        font-weight: 500;
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
+
+    p {
+        margin-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a:not(.btn) {
+        border-bottom: 1px solid currentColor;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+    }
+
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+            &::before {
+                content: '';
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 0.6rem;
+                margin-top: .9rem;
+                background-color: var(--red);
+
+                @include breakpoint(mobile) {
+                    margin-top: 0.8rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    margin-right: 0.3rem;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
