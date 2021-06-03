@@ -8,7 +8,9 @@
     letter-spacing: .02em;
     transition: background-color .2s, color .2s;
 
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
    
 
     color: white;
@@ -19,7 +21,7 @@
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        padding: 1rem 1.7rem;
+        padding: 1.2rem 2.4rem;
     }
 
     &:link,

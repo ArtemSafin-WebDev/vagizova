@@ -1,4 +1,4 @@
-<header class="page-header">
+<header class="page-header {{#if darkHeader}} dark {{/if}}">
     <div class="container">
         <div class="page-header__row">
 
@@ -13,13 +13,18 @@
                 <nav class="page-header__nav">
                     <ul class="page-header__nav-list">
                         <li class="page-header__nav-list-item active">
-                            <a href="#" class="page-header__nav-link">
+                            <a href="index.html" class="page-header__nav-link">
                                 Главная
                             </a>
                         </li>
                         <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                О нас
+                            <a href="about.html" class="page-header__nav-link">
+                                Обо мне
+                            </a>
+                        </li>
+                        <li class="page-header__nav-list-item">
+                            <a href="about.html" class="page-header__nav-link">
+                                Научная деятельность
                             </a>
                         </li>
                         <li class="page-header__nav-list-item">
@@ -32,11 +37,7 @@
                                 Новости
                             </a>
                         </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#" class="page-header__nav-link">
-                                Стажерам
-                            </a>
-                        </li>
+                        
                         <li class="page-header__nav-list-item">
                             <a href="#" class="page-header__nav-link">
                                 Контакты
@@ -47,7 +48,7 @@
 
                 <a href="tel:+79046667000" class="page-header__menu-phone">+7 (904) 666-7000</a>
 
-                <a href="#" class="btn page-header__menu-contact-btn">
+                <a href="#callback-modal" class="btn page-header__menu-contact-btn js-open-modal">
                     Связаться
                 </a>
 
@@ -56,7 +57,7 @@
 
             <a href="tel:+79046667000" class="page-header__phone-link">+7 (904) 666-7000</a>
 
-            <a href="#" class="page-header__contact-btn">
+            <a href="#callback-modal" class="page-header__contact-btn js-open-modal">
                 Связаться
             </a>
 

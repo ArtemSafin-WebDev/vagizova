@@ -1,0 +1,29 @@
+.about-intro {
+    padding-top: 15rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 10rem;
+    }
+}
+
+.about-intro__heading {
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.about-intro__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 50rem);
+    grid-gap: 14rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 3rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.about-intro__content {
+    margin-top: -0.6rem;
+}

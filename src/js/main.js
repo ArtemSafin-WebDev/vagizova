@@ -13,6 +13,7 @@ import accordions from './accordions';
 import anchorLinks from './anchorLinks';
 import menu from './menu';
 import vhUnits from './vhUnits';
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     menu();
     vhUnits();
+    modals();
     
 });
 
